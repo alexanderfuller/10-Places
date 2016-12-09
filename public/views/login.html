@@ -1,0 +1,31 @@
+<header class="header">
+  <div ng-controller="loginCtrl">
+<h1><a href="#/home">10 MUST VISIT PLACES</a></h1>
+  <ul class="nav">
+
+  <li ng-hide="username"><a>Account</a>
+    <ul>
+  <li ng-hide="username"><a href="#/login">Login</a></li>
+  <li ng-hide="username"><a href="#/register">Register</a></li>
+</ul>
+</li>
+  <li ng-hide="!username" class="dropdown"><a>{{username}}</a>
+    <ul>
+  <li ng-click="logout();" ng-hide="!username"><a href="#">Logout</a></li>
+</ul>
+  </li>
+  </ul>
+</header>
+<h2 ng-hide="!username">You are logged in</h2>
+<form role="form" name="loginForm" novalidate="" ng-hide="username" class="loginForm">
+  <h2>Login Form</h2>
+  <div ng-class="{'has-error':loginForm.email.$invalid && loginForm.email.$touched}">
+    <input type="email" name="email" class="email" ng-model="user.email" placeholder="Email Address" style="height:32px;">
+  </div>
+  <div ng-class="{'has-error':loginForm.password.$invalid && loginForm.password.$touched}">
+    <input type="password" name="password" class="password" ng-model="user.password" placeholder="Password" style="height:32px;">
+  </div>
+ <p ng-show="errMsg" style="color:#FF4D29">{{errorMessage}}</p>
+ <button type="submit"   ng-click="signIn()"  class="btnLogin">Sign In</button>
+ </form>
+</div>

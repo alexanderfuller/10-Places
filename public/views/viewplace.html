@@ -1,0 +1,45 @@
+<header class="header">
+  <div ng-controller="loginCtrl">
+  <h1><a href="#/home">10 MUST VISIT PLACES</a></h1>
+  <ul class="nav">
+
+  <li ng-hide="username"><a>Account</a>
+    <ul>
+  <li ng-hide="username"><a href="#/login">Login</a></li>
+  <li ng-hide="username"><a href="#/login">Register</a></li>
+</ul>
+</li>
+  <li ng-hide="!username" class="dropdown"><a>{{username}}</a>
+    <ul>
+  <li ng-click="logout();" ng-hide="!username"><a href="#">Logout</a></li>
+</ul>
+  </li>
+  </ul>
+</header>
+<div ng-model = "places" class="onePlace">
+  <h2>{{places[whichPlace].name}}</h2>
+  <img ng-src="images/{{places[whichPlace].img}}.jpg" alt="images/{{places[whichPlace].img}}">
+</div>
+<div class="contain">
+
+  <h2>
+    <img ng-src="images/chat.png" alt="chatIcon" style="width:30px;height:17px;margin-top:5px;">
+  Comments</h2>
+<div class="onePlaceComments">
+<input type="hidden" ng-model="whichPost.placeId = places[whichPlace].id">
+<li ng-repeat="comment in comments|filter:whichPost" class="comments">
+<span ng-hide="true">{{comment.placeId}}</span> <span style="color:green">{{comment.user}}</span>: {{comment.comment}}
+</li>
+</div>
+</div>
+ <!--<input type="hidden" ng-model="app.articleId"/>-->
+ <h3 class="tellLogin" ng-hide="username">Register/Login to comment on this place!</h3>
+<form name="postForm" ng-submit="createComment()" novalidate="" ng-hide="!username">
+  <h3>Leave a Comment!</h3>
+  <br>
+<textarea ng-model="comment.post"></textarea>
+<br>
+<button type="submit" id="pstCmt">Post Comment</button>
+</form>
+<a href="#/home" class="back">Back</a>
+</div>

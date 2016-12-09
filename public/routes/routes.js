@@ -1,0 +1,21 @@
+angular.module('placesGallery')
+.config(['$routeProvider',function($routeProvider){
+  $routeProvider
+  .when('/home',{
+    templateUrl:'views/home.html',
+    controller:'homeCtrl'
+  })
+  .when('/login',{
+    templateUrl:'views/login.html',
+    controller:'loginCtrl'
+  })
+  .when('/register', {
+    templateUrl:'views/register.html',
+    controller:'RegisterCtrl'
+  })
+  .when('/home/:placeId',{
+    templateUrl:'views/viewplace.html',
+    controller:'placeCtrl'
+  })
+  .otherwise({redirectTo:'/home'});
+}])

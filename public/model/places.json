@@ -1,0 +1,12 @@
+[
+  {"img":"brazil_iguassu_falls","name":"Iguaza Falls","location":"Misiones Province, Argentina","id":0},
+  {"img":"grand_canyon_arizona","name":"The Grand Canyon","location":"Arizona, USA","id":1},
+  {"img":"machu_picchu_peru","name":"Machu Picchu","location":"Andes Mountiains, Peru","id":2},
+  {"img":"mendenhall_ice_caves_alaska","name":"Mendenhall Ice Caves","location": "Junea, Alaska","id":3},
+  {"img":"Neuschwanstein_Castle_Germany","name":"Neuschwanstein Castle","location":"Schwangau, Germany","id":4},
+  {"img":"petra_jordan","name":"Petra","location":"Petra, Jordan","id":5},
+  {"img":"santorini_greece","name":"Santorini","location":"Santorini, Greece","id":6},
+  {"img":"sea_of_stars_vaadhoo","name":"Vaadhoo Island","location":"Raa Atoll, Malvides","id":7},
+  {"img":"taj_mahal_india","name":"Taj Mahal","location":"Agra, India","id":8},
+  {"img":"valley_ten_peaks","name":"Valley Ten Peaks","location":"Alberta, Canada","id":9}
+]

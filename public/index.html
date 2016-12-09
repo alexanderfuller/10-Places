@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="placesGallery">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.1.0/angularfire.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.0.4/firebase.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDu53_OFAVhSHx7E1mBR3Epydz-umwL0V0",
+    authDomain: "destinationgallery-da824.firebaseapp.com",
+    databaseURL: "https://destinationgallery-da824.firebaseio.com",
+    storageBucket: "destinationgallery-da824.appspot.com",
+    messagingSenderId: "916936883931"
+  };
+  firebase.initializeApp(config);
+</script>
+<meta name="description" content="must visit places">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 Places to Visit</title>
+</head>
+<body>
+<div class="main" ng-view></div>
+<footer ng-include="'views/footer.html'"></footer>
+<script src="js/app.js"></script>
+<script src="controllers/homeCtrl.js"></script>
+<script src="controllers/placeCtrl.js"></script>
+<script src="controllers/loginCtrl.js"></script>
+<script src="controllers/regCtrl.js"></script>
+<script src="services/getPlaces.js"></script>
+<script src="services/user.js"></script>
+<script src="routes/routes.js"></script>
+</body>
+</html>
